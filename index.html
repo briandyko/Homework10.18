@@ -1,10 +1,104 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-	<meta charset="utf-8" />
+    <title>Homework10.18</title>
+    <meta charset="utf-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="Site.css" rel="stylesheet" />
 </head>
 <body>
+    <ul class="media-list">
+        <li class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" id="resizePic" src="https://i.pinimg.com/736x/94/36/6a/94366a5011564b13b5fe9f4b179e9fe2--celebrity-photography-art-photography.jpg" alt="Sam Jackson looking good" />
+                </a>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email"></label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit">
+                                    <span class="btn btn-default">Subsribe</span>
+                                </button>
+                        </div>
+                    </div>
+                </form>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <img id="small" src="data:image/png;base64,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"/>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <span class="label label-default">Subscribe</span>
+                <span class="label label-primary">Bookmark</span>
+            </div>
+            <div class="media-body">
+                <h1 class="media-heading">What Makes It Art</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridi</p>
+                <p>Aenean commodo ligula eget dolor. Aenean massa.</p>
+                <!--Social Media Bar-->
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" class="active"><a href="#">Facebook<span class="badge">42</span></a></li>
+                    <li role="presentation"><a href="#">Twitter</a></li>
+                    <li role="presentation"><a href="#">LinkedIn <span class="badge">89</span></a></li>
+                </ul>
+
+                <hl>Chump Don't Get Played</hl>
+                <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
+                <p>Vestibulum sed tristique massa. Quisque et feugiat risus, eu tristique felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
+                <p>Quisque et feugiat risus, eu tristique felis.</p>
+                <p>Vestibulum sed tristique massa. Quisque et feugiat risus, eu tristique felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Pellentesque varius ipsum in urna semper volutpat. Etiam ac magna scelerisque, sodales enim at, interdum nibh. Nulla nec blandit orci. Ut suscipit sollicitudin varius. Etiam ut bibendum purus, sit amet tristique lectus.</p>
+                <p>Quisque et feugiat risus, eu tristique felis. Pellentesque habitant morbi</p>
+                <p> Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
+                <p>Quisque et feugiat risus, eu tristique felis.</p>
+                <p>Vestibulum sed tristique massa. Quisque et feugiat risus, eu tristique felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi.</p>
+            </div>
+                </li>
+    </ul>
+   
+    
 
 </body>
 </html>
+
+<!--<div class="col-sm-6 col-md-3">
+
+</div>-->
+<!--<div>
+    <!--<div class="col-sm-12 col-md-9 positioning">
+        <header>
+            <hl>What Makes it Art</hl>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridi</p>\
+            <p>Aenean commodo ligula eget dolor. Aenean massa.</p>
+        </header>-->
+<!--Social Media Bar-->
+<!--<ul class="nav nav-pills" role="tablist">
+    <li role="presentation" class="active"><a href="#">Facebook<span class="badge">42</span></a></li>
+    <li role="presentation"><a href="#">Twitter</a></li>
+    <li role="presentation"><a href="#">LinkedIn <span class="badge">89</span></a></li>-->
+<!--</ul>
+    <hl>Chump Don't Get Played</hl>
+    <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
+    <p>Vestibulum sed tristique massa. Quisque et feugiat risus, eu tristique felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>
+    <p>Quisque et feugiat risus, eu tristique felis.</p>
+    <p>Vestibulum sed tristique massa. Quisque et feugiat risus, eu tristique felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Pellentesque varius ipsum in urna semper volutpat. Etiam ac magna scelerisque, sodales enim at, interdum nibh. Nulla nec blandit orci. Ut suscipit sollicitudin varius. Etiam ut bibendum purus, sit amet tristique lectus.</p>
+    <p>Quisque et feugiat risus, eu tristique felis. Pellentesque habitant morbi</p>
+    <p> Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
+    <p>Quisque et feugiat risus, eu tristique felis.</p>
+    <p>Vestibulum sed tristique massa. Quisque et feugiat risus, eu tristique felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi.</p>
+</div>-->

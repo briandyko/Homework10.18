@@ -1,2 +1,21 @@
 ﻿body {
 }
+img#resizePic{
+    width:225px;
+    height:300px;
+    
+}
+
+div.positioning{
+    margin-left:300px;
+    
+}
+
+img#small{
+    width:25px;
+    height:25px;
+}
+
+h1 {
+    font-size:40px;
+}
